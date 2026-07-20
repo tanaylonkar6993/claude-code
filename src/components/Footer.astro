@@ -1,0 +1,24 @@
+---
+import SocialLinks from './SocialLinks.astro';
+
+interface Profile {
+  name: string;
+  githubUrl: string;
+  linkedinUrl: string | null;
+  email: string | null;
+  resumeUrl: string | null;
+}
+
+interface Props {
+  profile: Profile;
+}
+
+const { profile } = Astro.props;
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container">
+    <span>© {year} {profile.name}. Built with Astro, served by nginx.</span>
+    <SocialLinks profile={profile} />
+  </div>
+</footer>

@@ -1,0 +1,39 @@
+---
+import ProjectCard from './ProjectCard.astro';
+
+interface Project {
+  id: string;
+  name: string;
+  description: string;
+  url: string;
+  language: string;
+  topics: string[];
+  featured: boolean;
+  forked: boolean;
+  order: number;
+}
+
+interface Props {
+  projects: Project[];
+}
+
+const { projects } = Astro.props;
+const sorted = [...projects].sort((a, b) => a.order - b.order);
+const featured = sorted.filter((p) => p.featured);
+const others = sorted.filter((p) => !p.featured);
+---
+<section class="projects-section container" id="projects">
+  <h2>Featured Projects</h2>
+  <div class="projects-grid">
+    {featured.map((project) => <ProjectCard project={project} />)}
+  </div>
+
+  {others.length > 0 && (
+    <>
+      <h2>More Projects</h2>
+      <div class="projects-grid secondary">
+        {others.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </>
+  )}
+</section>

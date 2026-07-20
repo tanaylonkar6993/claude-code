@@ -1,0 +1,32 @@
+---
+import SocialLinks from './SocialLinks.astro';
+
+interface Profile {
+  name: string;
+  title: string;
+  location: string;
+  bio: string;
+  githubUrl: string;
+  linkedinUrl: string | null;
+  email: string | null;
+  resumeUrl: string | null;
+  avatarUrl: string | null;
+}
+
+interface Props {
+  profile: Profile;
+}
+
+const { profile } = Astro.props;
+---
+<section class="hero container" id="about">
+  {profile.avatarUrl && <img class="hero-avatar" src={profile.avatarUrl} alt={profile.name} loading="eager" />}
+  <h1>{profile.name}</h1>
+  <p class="title">{profile.title}</p>
+  <p class="location">{profile.location}</p>
+  <p class="bio">{profile.bio}</p>
+  <div class="cta-row">
+    <a class="btn" href={profile.githubUrl} target="_blank" rel="noopener noreferrer">View GitHub Profile</a>
+    <SocialLinks profile={profile} />
+  </div>
+</section>

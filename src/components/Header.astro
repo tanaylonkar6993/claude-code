@@ -1,0 +1,20 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+
+interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+---
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="#top">{name}</a>
+    <nav class="site-nav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="https://github.com/tanaylonkar6993" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <ThemeToggle />
+    </nav>
+  </div>
+</header>

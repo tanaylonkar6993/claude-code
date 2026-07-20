@@ -1,0 +1,78 @@
+{
+  "source": "static-json",
+  "updatedAt": "2026-07-18",
+  "projects": [
+    {
+      "id": "ai-kubehealer",
+      "name": "AI-kubeHealer",
+      "description": "AI-powered Kubernetes debugging and auto-remediation platform, orchestrated by Temporal. Detects broken pods (CrashLoopBackOff, OOMKilled, ImagePullBackOff), diagnoses root cause using Claude, and auto-remediates via crash-proof Temporal workflows.",
+      "url": "https://github.com/tanaylonkar6993/AI-kubeHealer",
+      "homepageUrl": null,
+      "language": "Python",
+      "topics": ["kubernetes", "ai", "llm", "temporal", "sre", "automation"],
+      "featured": true,
+      "forked": false,
+      "order": 1
+    },
+    {
+      "id": "user-metadata-service",
+      "name": "user-metadata-service",
+      "description": "Production-grade Spring Boot microservice demonstrating SRE reliability patterns: idempotency via X-Idempotency-Key, retry with exponential backoff and jitter, circuit breaker, custom metrics, and structured logging.",
+      "url": "https://github.com/tanaylonkar6993/user-metadata-service",
+      "homepageUrl": null,
+      "language": "Java",
+      "topics": ["java", "spring-boot", "sre", "reliability", "microservices"],
+      "featured": true,
+      "forked": false,
+      "order": 2
+    },
+    {
+      "id": "aws-ebs-autoscaler",
+      "name": "aws-ebs-autoscaler",
+      "description": "Terraform-based AWS EBS disk autoscaler with modular IaC for EC2, IAM, and DynamoDB. Isolated dev/prod environments, S3 remote state, and threshold-based autoscaling of EBS volumes.",
+      "url": "https://github.com/tanaylonkar6993/aws-ebs-autoscaler",
+      "homepageUrl": null,
+      "language": "Python",
+      "topics": ["aws", "terraform", "iac", "ebs", "autoscaling"],
+      "featured": true,
+      "forked": false,
+      "order": 3
+    },
+    {
+      "id": "wanderlust-azure",
+      "name": "wanderlust-azure",
+      "description": "Three-tier MERN travel blog deployed end-to-end on AKS, built on a well-known open-source mega-project as the starting point and extended with a full DevSecOps/GitOps pipeline: Docker, Jenkins CI, GitOps CD.",
+      "url": "https://github.com/tanaylonkar6993/wanderlust-azure",
+      "homepageUrl": null,
+      "language": "TypeScript",
+      "topics": ["mern", "aks", "kubernetes", "devsecops", "gitops", "jenkins"],
+      "featured": false,
+      "forked": false,
+      "order": 4
+    },
+    {
+      "id": "taska-todo-list-app",
+      "name": "Taska-ToDo-List-App",
+      "description": "Full-stack Todo application (Node.js, Express, MongoDB, EJS views), Dockerized, extended from a DevOps learning starter with persistent storage, due dates, priorities, tags, and repeat intervals.",
+      "url": "https://github.com/tanaylonkar6993/Taska-ToDo-List-App",
+      "homepageUrl": null,
+      "language": "EJS",
+      "topics": ["nodejs", "express", "mongodb", "docker", "fullstack"],
+      "featured": false,
+      "forked": false,
+      "order": 5
+    },
+    {
+      "id": "jenkins-sharedlib",
+      "name": "Jenkins_SharedLib",
+      "description": "Jenkins Shared Library providing reusable CI/CD pipeline steps for use across multiple projects.",
+      "url": "https://github.com/tanaylonkar6993/Jenkins_SharedLib",
+      "homepageUrl": null,
+      "language": "Groovy",
+      "topics": ["jenkins", "ci-cd", "groovy", "devops"],
+      "featured": false,
+      "forked": true,
+      "order": 6
+    }
+  ]
+}

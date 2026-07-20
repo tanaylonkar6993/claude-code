@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ProjectsGrid from '../components/ProjectsGrid.astro';
+import Footer from '../components/Footer.astro';
+import profile from '../data/profile.json';
+import projectsData from '../data/projects.json';
+---
+<BaseLayout title={`${profile.name} — ${profile.title}`} description={profile.bio}>
+  <div id="top">
+    <Header name={profile.name} />
+    <main>
+      <Hero profile={profile} />
+      <ProjectsGrid projects={projectsData.projects} />
+    </main>
+    <Footer profile={profile} />
+  </div>
+</BaseLayout>

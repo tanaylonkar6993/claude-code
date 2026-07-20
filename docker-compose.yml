@@ -1,0 +1,31 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portfolio-web
+    restart: unless-stopped
+    ports:
+      - "8085:80"
+    networks:
+      - portfolio-net
+
+  ngrok:
+    image: ngrok/ngrok:latest
+    container_name: portfolio-ngrok
+    restart: unless-stopped
+    environment:
+      NGROK_AUTHTOKEN: ${NGROK_AUTHTOKEN}
+    command:
+      - "http"
+      - "web:80"
+    ports:
+      - "4040:4040"
+    depends_on:
+      - web
+    networks:
+      - portfolio-net
+
+networks:
+  portfolio-net:
+    driver: bridge

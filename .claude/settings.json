@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "agent",
+            "prompt": "Hook input JSON: $ARGUMENTS. Determine the changed file path from tool_input.file_path (fall back to tool_response.filePath if absent). Read .claude/agents/code-reviewer.md in this repo and act as the code-reviewer agent defined there: apply its project context and review checklist (correctness, security, style, simplicity) to the changed file. Report findings using its Output format section, most severe first, or state in one line that no issues were found.",
+            "model": "claude-sonnet-5",
+            "timeout": 120,
+            "statusMessage": "Reviewing changed file..."
+          }
+        ]
+      }
+    ]
+  }
+}

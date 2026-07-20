@@ -1,0 +1,28 @@
+---
+interface Project {
+  id: string;
+  name: string;
+  description: string;
+  url: string;
+  language: string;
+  topics: string[];
+  forked: boolean;
+}
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+<a class="project-card" href={project.url} target="_blank" rel="noopener noreferrer">
+  <div class="project-card-head">
+    <h3>{project.name}</h3>
+    {project.forked && <span class="badge">Fork</span>}
+  </div>
+  <p>{project.description}</p>
+  <div class="project-card-footer">
+    <span class="lang-badge"><span class="lang-dot"></span>{project.language}</span>
+    {project.topics.slice(0, 4).map((topic) => <span class="tag">{topic}</span>)}
+  </div>
+</a>
