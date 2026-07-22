@@ -12,6 +12,10 @@ dist/
 # Personal Claude Code skills (local-only, not part of the site)
 .claude/skills/
 
+# Local agent-skill manager artifacts (awesome-copilot etc.)
+.agents/
+skills-lock.json
+
 # OS / editor
 .DS_Store
 *.log
