@@ -9,6 +9,9 @@ dist/
 .env
 .env.*.local
 
+# Personal Claude Code skills (local-only, not part of the site)
+.claude/skills/
+
 # OS / editor
 .DS_Store
 *.log
