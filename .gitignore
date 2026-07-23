@@ -9,9 +9,8 @@ dist/
 .env
 .env.*.local
 
-# Personal Claude Code skills (local-only, not part of the site)
+# Personal Claude Code skills (symlinks to external projects)
 .claude/skills/
-mock-interview/
 
 # Local agent-skill manager artifacts (awesome-copilot etc.)
 .agents/

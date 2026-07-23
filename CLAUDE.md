@@ -4,11 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repo layout
 
-This repo hosts three separate sub-projects, one per top-level folder:
+This repo hosts two sub-projects, one per top-level folder:
 
 - `portfolio/` — personal portfolio website (the main project; see below).
 - `issue-fixer/` — definition of the `issue-fixer` agent that runs weekly as a cloud routine, picking one open GitHub issue and opening a PR for it. `.claude/agents/issue-fixer.md` is a symlink into this folder so Claude Code still discovers it.
-- `mock-interview/` — personal `/mock-interview` skill (interview prep for DevOps/SRE/etc.). **Gitignored — local-only, never commit it.** `.claude/skills/mock-interview` is a symlink into this folder so the skill stays invocable.
+
+The `/mock-interview` skill used to live here; it is now its own project at `~/devops-stuff/megaProjects/mock-interview` (github.com/tanaylonkar6993/mock-interview). `.claude/skills/mock-interview` symlinks into it so the skill stays invocable from this repo.
 
 `.env` lives at the repo root (holds `NGROK_AUTHTOKEN` and `GITHUB_PAT`; gitignored). `portfolio/.env` is a symlink to it so `docker compose` picks it up.
 
