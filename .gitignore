@@ -11,6 +11,7 @@ dist/
 
 # Personal Claude Code skills (local-only, not part of the site)
 .claude/skills/
+mock-interview/
 
 # Local agent-skill manager artifacts (awesome-copilot etc.)
 .agents/
